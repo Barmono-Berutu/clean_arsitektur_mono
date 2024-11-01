@@ -1,9 +1,12 @@
 # clean_arsitektur_mono
-clean arsitektur sederhana yang memiliki user auth dan crud data
+Clean arsitektur sederhana yang memiliki user authentication dan CRUD data.
 
-# 1. clone repository github
-git clone https://github.com/Barmono-Berutu/clean_arsitektur_mono.gi
-# 2. sebelum running code jalankan perintah ini terlebih dahulu
-cp .env.example .env
-# 3. setelah mengubah semua data yang ada di .env silahkan running code
-go run main.go
+1. Clone repository GitHub:
+   ```bash
+   git clone https://github.com/Barmono-Berutu/clean_arsitektur_mono.git
+2. Sebelum menjalankan kode, jalankan perintah ini terlebih dahulu:
+   ```bash
+   cp .env.example .env
+3. Setelah mengubah semua data yang ada di .env, silakan jalankan kode:
+   ```bash
+   go run main.go
