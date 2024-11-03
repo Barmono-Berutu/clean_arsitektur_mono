@@ -63,14 +63,14 @@ jobs:
         ssh -i ec2-key.pem -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << EOF
 
           # Stop the current container if running
-          docker ps -q --filter "name=my-container" | grep -q . && docker stop my-container || true
-          docker rm my-container || true
+          sudo docker ps -q --filter "name=my-container" | grep -q . && docker stop my-container || true
+          sudo docker rm my-container || true
 
           # Pull the latest image from ECR
-          docker pull $IMAGE_URI
+          sudo docker pull $IMAGE_URI
 
           # Run the new container
-          docker run -d --name my-container -p 8000:8000 $IMAGE_URI
+          sudo docker run -d --name my-container -p 8000:8000 $IMAGE_URI
         EOF
     - name: Clean up PEM file
       run: rm -f ec2-key.pem
